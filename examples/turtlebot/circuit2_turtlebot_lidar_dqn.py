@@ -330,12 +330,14 @@ if __name__ == '__main__':
 
     #start iterating from 'current epoch'.
 
-    for epoch in xrange(current_epoch+1, epochs+1, 1):
+    #for epoch in xrange(current_epoch+1, epochs+1, 1):
+    for epoch in range(current_epoch+1, epochs+1, 1):
         observation = env.reset()
         cumulated_reward = 0
 
         # number of timesteps
-        for t in xrange(steps):
+        #for t in xrange(steps):
+        for t in range(steps):
             # env.render()
             qValues = deepQ.getQValues(observation)
 
